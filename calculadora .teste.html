@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ptr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora:</title>
+
+    <style>
+        body{
+            background-color: rgb(255, 0, 179);
+        }
+        
+        .titulo{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .botao{
+            margin: 20px;
+            padding: 15px;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            border: 2px solid black;
+            border-radius: 5px;
+
+        }
+
+        .botao button{
+            padding: 15px;
+            color: white;
+            font-size: 20px;
+            background-color: rgb(255, 0, 179) ;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 class="titulo">Calculadora</h1>
+    <div id="output"></div>
+
+    <div class="botao">
+        <button onclick="soma()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mult()">*</button>
+        <button onclick="div()">/</button>
+    </div>
+
+    <script>
+
+        var num1 = prompt('digite um número: ');
+        num1 = parseFloat(num1);
+
+        function soma(){
+            var num2 = prompt('digite outro número: ');
+            num2 = parseFloat(num2);
+
+            var soma = (num1+num2);
+            mensagem = soma;
+            output.innerHTML = mensagem;
+
+        }
+
+        function sub(){
+            num2 = prompt('digite outro número: ');
+
+            var sub = (num1-num2);
+            
+            mensagem = sub;
+            output.innerHTML = mensagem;
+
+        }
+
+        function mult(){
+            num2 = prompt('digite outro número: ');
+
+            var mult = (num1*num2);
+
+            mensagem = mult;
+            output.innerHTML = mensagem;
+
+        }
+
+        function div(){
+            num2 = prompt('digite outro número: ');
+
+            var div = (num1/num2);
+
+            mensagem = div;
+            output.innerHTML = mensagem;
+        }
+        
+
+
+        var output = document.querySelector('#output');
+        var mensagem = '';
+
+    </script>
+    
+</body>
+</html>
